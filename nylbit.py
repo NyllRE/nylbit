@@ -114,7 +114,7 @@ class BlockChain:
 		#verifying the proof: does hash(last_proof, proof) contain 4 leading zeroes?
 
 		guess = f'{last_proof}{proof}'.encode()
-		guess_hash = hashlib.sha256(guess).hexdigest()
+		guess_hash = sha256(guess).hexdigest()
 		return guess_hash[:4] == "0000"
 
 	@property

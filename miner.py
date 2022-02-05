@@ -1,6 +1,8 @@
+from nylbit import BlockChain
+
 blockchain = BlockChain()
 
-print("***Mining fccCoin about to start***")
+print("***Mining nylbit about to start***")
 print(blockchain.chain)
 
 last_block = blockchain.latest_block
@@ -9,7 +11,7 @@ proof_no = blockchain.proof_of_work(last_proof_no)
 
 blockchain.new_data(
     sender="0",  # it implies that this node has created a new block
-    recipient="Quincy Larson",  # let's send Quincy some coins!
+    recipient="Nyll Bool",  # let's send Quincy some coins!
     # creating a new block (or identifying the proof number) is awarded with 1
     quantity=1,
 )
@@ -17,5 +19,5 @@ blockchain.new_data(
 last_hash = last_block.calculate_hash
 block = blockchain.construct_block(proof_no, last_hash)
 
-print("***Mining fccCoin has been successful***")
+print("***Mining nylbit has been successful***")
 print(blockchain.chain)
