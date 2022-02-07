@@ -10,7 +10,7 @@ last_proof_no = last_block.proof_no
 proof_no = blockchain.proof_of_work(last_proof_no)
 
 blockchain.new_data(
-    sender="0",  # it implies that this node has created a new block
+    sender="Nyll Test",  # it implies that this node has created a new block
     recipient="Nyll Bool",  # let's send Quincy some coins!
     # creating a new block (or identifying the proof number) is awarded with 1
     quantity=1,
